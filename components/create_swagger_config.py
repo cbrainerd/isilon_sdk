@@ -193,6 +193,14 @@ def IsiArrayPropToSwaggerArrayProp(
             prop["items"]["type"] = "boolean"
     elif "type" not in prop["items"] and "$ref" not in prop["items"]:
         raise RuntimeError("Array with no type or $ref: " + str(prop))
+    if "enum" in prop["items"]:
+        # Deduplicate enum list
+        seen = {}
+        for item in prop["items"]["enum"]:
+            print('checking {0}'.format(item))
+            if item in seen:
+                prop["items"]["enum"].remove(item)
+            seen[item] = True
 
 
 def IsiSchemaToSwaggerObjectDefs(
