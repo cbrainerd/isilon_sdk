@@ -964,16 +964,16 @@ def main():
         "info": {
           "version": "1.0.0",
           "title": "Isilon SDK",
-          "description": "Isilon SDK - Swagger Open API Specification for OneFS API",
-          "termsOfService": "http://www.emc.com",
+          "description": "Isilon SDK - Language bindings for the OneFS API",
+          "termsOfService": "https://github.com/emccode/emccode.github.io/wiki/EMC-CODE-Governance,-Contributing,-and-Code-of-Conduct",
           "contact": {
             "name": "Isilon SDK Team",
             "email": "sdk@isilon.com",
-            "url": "http://www.emc.com"
+            "url": "https://emccode.com/isilon"
           },
           "license": {
             "name": "MIT",
-            "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+            "url": "https://github.com/emccode/emccode.github.io/wiki/EMC-%7Bcode%7D-License-Information"
           }
         },
         "schemes": [
