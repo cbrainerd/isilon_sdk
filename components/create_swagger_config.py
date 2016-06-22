@@ -24,6 +24,46 @@ k_swaggerParamIsiPropCommonFields = [
 g_operations = {} # tracks swagger ops generated from URLs to ensure uniquenes
 
 
+DESCRIPTION_TEXT = """
+Isilon SDK - Language bindings for the OneFS API
+================================================
+
+Installation
+------------
+`pip install isi_sdk_7_2`
+`pip install isi_sdk_8_0`
+
+Usage
+-----
+Example program::
+
+    import isi_sdk_8_0 # or isi_sdk_7_2, depending on the release you downloaded
+    from isi_sdk_8_0.rest import ApiException
+    from pprint import pprint
+    import urllib3
+    urllib3.disable_warnings()
+
+    # configure username and password
+    isi_sdk_8_0.configuration.username = "YOUR_USERNAME"
+    isi_sdk_8_0.configuration.password = "YOUR_PASSWORD"
+    isi_sdk_8_0.configuration.verify_ssl = False
+
+    # configure host
+    host = "https://YOUR_CLUSTER_HOSTNAME_OR_NODE_IP_ADDRESS:8080"
+    api_client = isi_sdk_8_0.ApiClient(host)
+    protocols_api = isi_sdk_8_0.ProtocolsApi(api_client)
+
+    # get all exports
+    sort = "description"
+    limit = 50
+    dir = "ASC"
+    try:
+        api_response = protocols_api.list_nfs_exports(sort=sort, limit=limit, dir=dir)
+        pprint(api_response)
+    except ApiException as e:
+        print "Exception when calling ProtocolsApi->list_nfs_exports: %s\n" % e
+"""
+
 def OneFsShortVers(host, port, auth):
     """Query a cluster and return the 2 major version digits"""
     url = "https://{0}:{1}/platform/1/cluster/config".format(host, port)
@@ -964,7 +1004,7 @@ def main():
         "info": {
           "version": "1.0.0",
           "title": "Isilon SDK",
-          "description": "Isilon SDK - Language bindings for the OneFS API",
+          "description": DESCRIPTION_TEXT,
           "termsOfService": "https://github.com/emccode/emccode.github.io/wiki/EMC-CODE-Governance,-Contributing,-and-Code-of-Conduct",
           "contact": {
             "name": "Isilon SDK Team",
