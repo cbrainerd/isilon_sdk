@@ -24,13 +24,14 @@ k_swaggerParamIsiPropCommonFields = [
 g_operations = {} # tracks swagger ops generated from URLs to ensure uniquenes
 
 
-DESCRIPTION_TEXT = """
+DESCRIPTION_TEXT = u"""
 Isilon SDK - Language bindings for the OneFS API
 ================================================
 
 Installation
 ------------
 `pip install isi_sdk_7_2`
+
 `pip install isi_sdk_8_0`
 
 Usage
