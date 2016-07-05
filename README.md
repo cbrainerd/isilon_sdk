@@ -9,20 +9,21 @@ This repository also includes tools to build PAPI bindings yourself for a large 
 
 ### Installing the pre-built Python PAPI bindings
 
-1. Download the latest package from the "releases" page of this repo.
+If you will only to connecting to OneFS 8.0 and later clusters:
 
-2. Install via [Setuptools](http://pypi.python.org/pypi/setuptools).  For example, unzip the package archive to a directory and from there run:
+`pip install isi_sdk_8_0`
 
-```sh
-python setup.py install --user
-```
+If connecting to OneFS 7.2 and later clusters:
 
-You may need to install the Python [Setuptools](http://pypi.python.org/pypi/setuptools) on your system, if they are not already installed. For instructions, see http://pypi.python.org/pypi/setuptools.
+`pip install isi_sdk_7_2`
 
-Then at a Python prompt or in your Python programs, import the package:
-```python
-import isi_sdk_8_0 # or isi_sdk_7_2, depending on the release you downloaded
-```
+### Basic Usage
+
+See the generated packages on PyPI for example code:
+
+[isi\_sdk\_8\_0](https://pypi.python.org/pypi/isi-sdk-8-0)
+
+[isi\_sdk\_7\_2](https://pypi.python.org/pypi/isi-sdk-7-2)
 
 ### Bindings Documentation
 
