@@ -9,7 +9,7 @@ This repository also includes tools to build PAPI bindings yourself for a large 
 
 ### Installing the pre-built Python PAPI bindings
 
-If you will only to connecting to OneFS 8.0 and later clusters:
+If you will only connect to OneFS 8.0 and later clusters:
 
 `pip install isi_sdk_8_0`
 
