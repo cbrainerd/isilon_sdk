@@ -7,6 +7,9 @@ from setuptools import setup, find_packages
 
 NAME = "{{packageName}}"
 VERSION = "{{packageVersion}}"
+LONG_DESCRIPTION = """\
+{{appDescription}}
+"""
 
 {{#apiInfo}}{{#apis}}{{^hasMore}}
 
@@ -29,9 +32,7 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    {{appDescription}}
-    """
+    long_description=LONG_DESCRIPTION.replace('PKG_NAME', NAME)
 )
 
 {{/hasMore}}{{/apis}}{{/apiInfo}}

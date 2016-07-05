@@ -1,9 +1,7 @@
 ## Installation
-`pip install isilon_sdk_7_2`
 
-or 
+`pip install PKG_NAME`
 
-`pip install isilon_sdk_8_0`
 
 ## Example program
 
