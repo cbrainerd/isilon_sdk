@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/Isilon/isilon_sdk.svg?branch=master)](https://travis-ci.org/Isilon/isilon_sdk)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/isilon/isilon_sdk.svg)](http://isitmaintained.com/project/isilon/isilon_sdk "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/isilon/isilon_sdk.svg)](http://isitmaintained.com/project/isilon/isilon_sdk "Percentage of issues still open")
+
+
 # Isilon Software Development Kit (isi-sdk)
 Language bindings for the OneFS API and tools for building them
 
