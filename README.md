@@ -15,6 +15,13 @@ This repository also includes tools to build PAPI bindings yourself for a large 
 
 ### Installing the pre-built Python PAPI bindings
 
+#### Prerequisites
+
+* [Python](https://www.python.org/downloads/) 2.7 or later
+* [pip](https://pip.pypa.io/en/stable/installing/)
+
+#### Installing the package
+
 If you will only connect to OneFS 8.0 and later clusters:
 
 `pip install isi_sdk_8_0`
@@ -44,6 +51,6 @@ We intend to also publish online docs as part of the build process for this repo
 ### Other Isilon SDK and API links:
 
 * For OneFS API reference documents, discussions, and blog posts, refer to the [Isilon SDK Info Hub](https://community.emc.com/docs/DOC-48273).
-* To browse the Isilon InsiqhtIQ statistics API, refer to the [Stat Key Browser](https://github.com/isilon/isilon_stat_browser.git) Github repository.
+* To browse the Isilon InsightIQ statistics API, refer to the [Stat Key Browser](https://github.com/isilon/isilon_stat_browser.git) Github repository.
 
 

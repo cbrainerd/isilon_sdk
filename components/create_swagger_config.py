@@ -969,11 +969,11 @@ def main():
           "contact": {
             "name": "Isilon SDK Team",
             "email": "sdk@isilon.com",
-            "url": "https://emccode.com/isilon"
+            "url": "https://github.com/Isilon/isilon_sdk"
           },
           "license": {
             "name": "MIT",
-            "url": "https://github.com/emccode/emccode.github.io/wiki/EMC-%7Bcode%7D-License-Information"
+            "url": "https://github.com/Isilon/isilon_sdk/blob/master/LICENSE"
           }
         },
         "schemes": [
