@@ -905,9 +905,11 @@ def GetEndpointPaths(source_node_or_cluster, papi_port, baseUrl, auth,
         curEndPoint = endPointListJson["directory"][epIndex]
         if curEndPoint[2] != '/':
             # skip floating point version numbers
+            # this will break for PAPI versions > 9
             epIndex += 1
             continue
         #print "curEndPoint[" + str(epIndex) + "] = " + curEndPoint
+        # find the latest version of the endpoint
         nextEpIndex = epIndex + 1
         while nextEpIndex < numEndPoints:
             nextEndPoint = endPointListJson["directory"][nextEpIndex]
@@ -927,23 +929,27 @@ def GetEndpointPaths(source_node_or_cluster, papi_port, baseUrl, auth,
             continue
 
         if curEndPoint[-1] != '>':
+            # this is non-collection endpoint
             baseEndPoints[curEndPoint[2:]] = (curEndPoint, None)
         else:
+            # this is a collection endpoint
             try:
                 itemEndPoint = curEndPoint
                 lastSlash = itemEndPoint.rfind('/')
                 baseEndPointTuple = baseEndPoints[itemEndPoint[2:lastSlash]]
                 baseEndPointTuple = (baseEndPointTuple[0], itemEndPoint)
+                print "Adding endPointPath: %s" % str(baseEndPointTuple)
                 endPointPaths.append(baseEndPointTuple)
                 del baseEndPoints[itemEndPoint[2:lastSlash]]
             except KeyError:
                 # no base for this itemEndPoint
+                print "Adding endPointPath: %s" % str((None, itemEndPoint))
                 endPointPaths.append((None, itemEndPoint))
-
         epIndex += 1
 
     # remaining base end points have no item end point
     for baseEndPointTuple in baseEndPoints.values():
+        print "Adding endPointPath: %s" % str(baseEndPointTuple)
         endPointPaths.append(baseEndPointTuple)
 
     def EndPointPathCompare(a, b):
